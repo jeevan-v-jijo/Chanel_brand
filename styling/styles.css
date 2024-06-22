@@ -21,10 +21,14 @@
 }
 
 /* tags css */
-body{
+html,body{
     background-color: hsl(30, 38%, 92%);
-    padding: 0;
+    padding: 0px;
     margin:0;
+    height:100vh;
+    width:100vw;
+
+    
     
 }
 img{
@@ -52,7 +56,7 @@ svg{
     width:40%;
     height:60%;
     background-color: white;
-    min-width: 400px;
+    min-width: 500px;
     min-height: 450px;
     /* to curve the borders of main_div */
     border-radius: 10px;
@@ -63,7 +67,7 @@ svg{
     flex-direction: row;
 
     /* to center the main_div */
-    position:absolute;
+    position:relative;
     top: 50%;
     left:50%;
     transform: translate(-50%,-50%);
@@ -76,7 +80,8 @@ svg{
 .attribution{
     position:absolute;
     bottom: 0px;
-    left:40%;
+    left:50%;
+    transform: translate(-50%,0%);
 
     
 }
@@ -117,4 +122,46 @@ svg{
     font-weight: 500;
 }
 
- 
+@media (max-width: 511px) {
+    body{
+        background-color: hsl(30, 38%, 92%);
+        padding-top: 50px;
+        margin:0;
+        height:100vh;
+        width:100vw;
+    
+        
+        
+    }
+    .main_div {
+      width: 90%;
+      height: auto;
+      flex-direction: column;
+      min-width: unset;
+      min-height: unset;
+      overflow: hidden;
+    }
+    #leftcolumn,
+    #rightcolumn {
+      width: auto;
+      height: 100%;
+      margin: 0;
+    }
+    #rightcolumn {
+      padding: 20px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .attribution{
+    
+      position:relative;
+      left:50%;
+        
+      transform: translate(-50%,180px);
+    
+        
+    }
+  }
+    
