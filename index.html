@@ -27,7 +27,11 @@
 <body>
   <div class="main_div">
     <div id="leftcolumn">
-      <img src="images/image-product-desktop.jpg" alt="image of chanel perfume">
+      <picture>
+        <source media="(min-width: 511px)" srcset="images/image-product-desktop.jpg">
+        <img src="images/image-product-mobile.jpg" alt="image of chanel">
+      </picture>
+      <!-- <img src="images/image-product-desktop.jpg" alt="image of chanel perfume"> -->
     </div>
     <div id="rightcolumn">
       <p class="Montserrat" id="perfume">PERFUME</p>
